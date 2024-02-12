@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'blue-rgba' :'rgb(15,22,35)',
+                'input-rgba' :'rgb(17,24,39)',
+                'right-rgba' :'rgb(15,22,35)',
+                'border-rgba' :'rgb(29,36,50)',
+  
+              }
+            }
+          }
+        }
+      </script>
+       <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    
+
+</head>
+<body class="border border-gray-200">
+    <section class=" relative">
+        <section class="border border-gray-400">
+            <div class="container lg:mx-auto border border-gray-100 py-3 ">
+                <div class="flex justify-between md:items-center ">
+                    <div class="flex  ">
+                        <a href="#" class="md:mr-auto md:hidden button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-10  text-black " id="button">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                              </svg>
+                        </a>
+                        <a href="#" class="md:ml-8   ">
+                            <img src="tailwind-svgrepo-com.svg" alt="logo" class="lg:ml-2 z-50 absolclass">
+                        </a>
+                    </div>
+                  
+                   <!-- toggle menu -->
+                    
+                        <ul class="md:flex hidden ">
+                            <li class="ml-8 font-semibold text-gray-600"><a href="#">Home</a></li>
+                            <li class="ml-8 font-semibold text-gray-600"><a href="#">Invoice</a></li>
+                            <li class="ml-8 font-semibold text-gray-600"><a href="#">Client</a></li>
+                            <li class="ml-8  font-semibold text-gray-600"><a href="#">Expenses</a></li>
+                        </ul>
+                             <!-- toggle menu -->
+                             <div class="h-screen w-screen bg-white  font-bold hidden menu absolute top-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-6 my-4 xIcon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                  </svg>
+                                  
+                                <ul class="md:hidden flex flex-col justify-start items-start  py-5 z-30 ">
+                                    <li class="mt-5 text-lg font-semibold px-8 hover:bg-gray-100 "><a href="#" class="">Home</a></li>
+                                    <li class="mt-5 text-lg font-semibold px-8 hover:bg-gray-100 "><a href="#" class="">Invoice</a></li>
+                                    <li class="mt-5 text-lg font-semibold px-8 hover:bg-gray-100 "><a href="#" class="">Client</a></li>
+                                    <li class="mt-5 text-lg font-semibold px-8 hover:bg-gray-100 "><a href="#" class="">Expenses</a></li>
+                                </ul>
+                            </div>
+                        
+                  <!-- toggle menu -->
+                   
+                    <div class="flex  justify-between items-center mr-5 lg:mr-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                          </svg>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="tom"  class="rounded-2xl  h-8 w-8 ">
+    
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <section>
+            <div class="container w-full lg:mx-auto border-collapse  py-3 border border-gray-200 z-0">
+                  <div class="flex  lg:px-10 px-5">
+                    <a href="#" class="text-lg md:text-xl  md:py-2 py-1 font-semibold">Cashflow</a>
+                    <div class="border-r border-gray-150 ml-5 hidden md:block"></div>
+                    <div class="md:flex ml-5 justify-center items hidden  md:items-center">
+                        <a href="#" class="text-medium md:mr-8 font-semibold text-blue-800">Last 7 days</a>
+                        <a href="#" class="text-medium md:mr-8 font-semibold">Last 30 days</a>
+                        <a href="#" class="text-medium md:mr-8 font-semibold">All time</a>
+                    </div>
+                    
+                    <button class="md:py-1 md:px-5 px-2 py-1   bg-blue-600 ml-auto rounded font-semibold text-white text-center text-sm md:text-medium hover:bg-blue-500">
+                        + New invoice
+                    </button>
+                  </div>
+                  <div class="md:hidden ml-2 px-3 my-3">
+                    <a href="#" class="text-sm font-semibold md:text-medium md:mr-5 mr-1 text-blue-600">Last 7 days</a>
+                    <a href="#" class="text-sm font-semibold md:text-medium md:mr-5 mr-1">Last 30 days</a>
+                    <a href="#" class="text-sm font-semibold md:text-medium md:mr-5 mr-1">All time</a>
+                </div>
+                    
+            </div>
+        </section>
+        <section>
+                <div class="container lg:mx-auto  z-0">
+                    <div class="grid lg:grid-cols-4 lg:grid-flow-row md:grid-cols-2 md:grid-flow-row ">
+                        <div class="border  lg:px-10  px-5  py-5 md:py-8">
+                            <div class="flex justify-between items-center text-gray-500  ">
+                                <p class="text-sm font-semibold md:text-medium">Revenue</p>
+                                <p class="text-gray-600 text-sm font-semibold">+4.75%</p>
+                            </div>
+                            <p class="mt-5 md:text-2xl lgtext-4xl font-semibold">$405,091.00</p>
+                        </div>
+                        <!-- 2 -->
+                        <div class="border lg:px-10  px-5  py-5 md:py-8 bg-gradient-to-b from-white to-red-50 ">
+                            <div class="flex justify-between items-center text-gray-500 ">
+                                <p class="text-sm font-semibold md:text-medium">Overdue invoices</p>
+                                <p class="text-red-600 text-sm font-semibold">+4.75%</p>
+                            </div>
+                            <p class="mt-5 md:text-2xl lgtext-4xl font-semibold">$12,787.00</p>
+                        </div>
+                        <!-- 3 -->
+                        <div class="border lg:px-5  px-5 py-5 md:py-8 bg-gradient-to-b from-white to-red-50">
+                            <div class="flex justify-between items-center  text-gray-500 ">
+                                <p class="text-sm font-semibold md:text-medium ">Outstanding<span class="text-sm ml-2">invoices</span></p>
+                                <p class="text-gray-600 text-sm font-semibold">+4.75%</p>
+                            </div>
+                            <p class="mt-5 md:text-2xl lgtext-4xl font-semibold">$245,988.00</p>
+                        </div>
+                        <!-- 4 -->
+                        <div class="border lg:px-10  px-5 py-5 md:py-8 bg-gradient-to-b from-white to-red-50">
+                            <div class="flex justify-between items-center text-gray-500 ">
+                                <p class="text-sm font-semibold md:text-medium">Expenses</p>
+                                <p class="text-red-600 text-sm font-semibold">+4.75%</p>
+                            </div>
+                            <p class="mt-5 md:text-2xl lgtext-4xl font-semibold">$30,156.00</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section >
+            <div class="container py-8   lg:mx-auto border border-gray-200 ">
+                <div class="lg:px-10 px-5 " >
+                    <h2 class="text-medium font-semibold md:pt-5">Recent activity</h2>
+                </div>
+               
+            </div>
+        </section>
+        <section class="">
+            <div class="container   py-4  lg:mx-auto border-b border-gray-100  bg-gray-50">
+                <div class="lg:px-10 px-5">
+                    <h2 class="text-medium font-semibold">Today</h2>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container   py-5 lg:mx-auto border border-gray-200 ">
+                <div class=" w-full">
+                    <div class="flex  justify-between items-center lg:px-10 px-5 py-3  md:border-b md:border-gray-200 ">
+                        <div class="mt-2 md:mt-0" >
+                            <div class="flex items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden md:block mr-5 text-gray-600 ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>
+                                  <div class="flex items-center justify-center">
+                                    <h2 class="text-sm font-semibold">$7,600.00 USD</h2>
+                                    <span class="border border-green-800 md:px-2 px-2   text-green-800 bg-green-200 rounded text-xs font-semibold ml-2">Paid</span>
+                                  </div>
+                                 
+                            </div>
+                                <h2 class="text-xs text-gray-600 py-2 px-1 md:ml-10">$500.00 tax</h2>
+                        </div>
+                      
+                          <div class="hidden md:block md:ml-1">
+                             <h2 class="text-sm font-semibold">Reform</h2>
+                             <h2 class="text-xs text-gray-600 py-2 ">Website design</h2>
+                          </div>
+    
+                           <div>
+                            <h2 class="md:flex text-sm text-right md:text-left text-blue-800">View <span class="hidden md:pl-1 md:block">transaction</span></h2>
+                            <h2 class="text-xs text-gray-600 md:py-2 py-1">Invoice #00012</h2>
+                         </div>
+                    </div>
+                    <!--  -->
+                    
+                    <!--  -->
+                    <div class="flex  justify-between items-center lg:px-10 px-5 py-3  md:border-b md:border-gray-200 ">
+                        <div class="mt-2 md:mt-0">
+                            <div class="flex ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden md:block mr-5 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>
+                                  
+                                  <div class="flex items-center">
+                                    <h2 class="text-sm font-semibold">$10,600.00 USD</h2>
+                                    <span class="border border-gray-400 md:px-2 px-2  text-gray-700 bg-gray-50 rounded text-xs font-semibold ml-2">Withdraw</span>
+                                  </div>
+                                 
+                            </div>
+                                <h2 class="text-xs text-gray-600 py-2 px-1 md:ml-10">$500.00 tax</h2>
+                        </div>
+                      
+                          <div class="hidden md:block md:mr-8">
+                             <h2 class="text-sm font-semibold">Tom cook</h2>
+                             <h2 class="text-xs text-gray-600 py-2 ">Website design</h2>
+                          </div>
+                          <div>
+                            <h2 class="md:flex text-sm text-right md:text-left text-blue-800">View <span class="hidden md:pl-1 md:block">transaction</span></h2>
+                            <h2 class="text-xs text-gray-600 md:py-2 py-1">Invoice #00012</h2>
+                         </div>
+                    </div>
+                    <!--  -->
+                    <div class="flex  justify-between items-center lg:px-10 px-5 py-3  ">
+                        <div class="mt-2 md:mt-0">
+                            <div class="flex ">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden md:block mr-5 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                  </svg>
+                                  
+                                  <div class="flex items-center">
+                                    <h2 class="text-sm font-semibold">$20,000.00 USD</h2>
+                                    <span class="border md:px-2 px-2   border-red-300  text-red-800 bg-red-200 rounded text-xs font-semibold ml-2">Overdue</span>
+                                  </div>
+                                 
+                            </div>
+                                <h2 class="text-xs text-gray-600 py-2 px-1 md:ml-10">$500.00 tax</h2>
+                        </div>
+                      
+                          <div class="hidden md:block md:mr-7">
+                             <h2 class="text-sm font-semibold">Tuple</h2>
+                             <h2 class="text-xs text-gray-600 py-2 ">Website design</h2>
+                          </div>
+                          <div>
+                            <h2 class="md:flex text-sm text-right md:text-left text-blue-800">View <span class="hidden md:pl-1 md:block">transaction</span></h2>
+                            <h2 class="text-xs text-gray-600 md:py-2 py-1">Invoice #00012</h2>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container   py-4  lg:mx-auto border-b border-gray-200  bg-gray-50">
+                <div class="lg:px-10 px-5">
+                    <h2 class="text-medium font-semibold">Yesterday</h2>
+                </div>
+            </div>
+        </section>
+        
+        <section class="">
+            <div class="container   py-5 lg:mx-auto  ">
+                <div class="flex  justify-between items-center lg:px-10 px-5 py-3  md:border-b md:border-gray-200 ">
+                    <div class="mt-2 md:mt-0" >
+                        <div class="flex items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden md:block mr-5 text-gray-600 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                              </svg>
+                              <div class="flex items-center justify-center">
+                                <h2 class="text-sm font-semibold">$7,600.00 USD</h2>
+                                <span class="border border-green-800 md:px-2 px-2   text-green-800 bg-green-200 rounded text-xs font-semibold ml-2">Paid</span>
+                              </div>
+                             
+                        </div>
+                            <h2 class="text-xs text-gray-600 py-2 px-1 md:ml-10">$500.00 tax</h2>
+                    </div>
+                  
+                      <div class="hidden md:block">
+                         <h2 class="text-sm font-semibold">Reform</h2>
+                         <h2 class="text-xs text-gray-600 py-2 ">Website design</h2>
+                      </div>
+
+                       <div>
+                        <h2 class="md:flex text-sm text-right md:text-left text-blue-800">View <span class="hidden md:pl-1 md:block">transaction</span></h2>
+                        <h2 class="text-xs text-gray-600 md:py-2 py-1">Invoice #00012</h2>
+                     </div>
+                </div>
+            </div>
+            
+        </section>
+        <section >
+            <div class="container  py-2 lg:mx-auto   text-gray-900 ">
+                <div class=" flex justify-between items-center lg:px-10 px-5 py-3 ">
+                    <h2 class="text-medium font-semibold ">Recent Clients</h2>
+                    <h2 class="md:text-medium text-sm font-semibold   ">View all</h2>
+                </div>
+            </div>
+        </section>
+        
+       <section class="mb-10 ">
+            <div class="container lg:mx-auto lg:px-10 px-5">
+                <div class="grid  md:grid-col-1 md:grid-flow-row lg:grid-cols-3 lg:grid-flow-row py-5 gap-10">
+                    <div class="border border-gray-200 rounded ">
+                        <div class="flex justify-between items-center bg-gray-100 py-5 md:px-8 px-5">
+                            <div class="flex items-center ">
+                                <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="lastsecImg" class="border rounded border-gray-300 h-10 w-10">
+                                <h2 class="text-sm font-semibold ml-5">Tuple</h2>
+                            </div>
+                            
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                  </svg>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="flex justify-between md:px-8 px-5 border-b py-4">
+                                <h2 class="text-sm md:font-semibold md:text-medium  text-gray-500">Last invoice</h2>
+                                <h2 class="text-sm md:font-semibold md:text-medium  text-gray-800">Decembaer 13,2022</h2>
+                            </div>
+                            <div class="flex justify-between  md:px-8 px-5 py-4">
+                                <h2 class=" text-sm md:font-semibold md:text-medium  text-gray-500">Amount</h2>
+                                <div class="flex items-center">
+                                    <h2  class="text-sm md:text-medium">2000</h2>
+                                    <p class="border border-red-300 px-1 ml-2 text-red-800 bg-red-200 rounded text-xs font-semibold">Overdue</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <!--  -->
+                    <div class="border border-gray-200 rounded ">
+                        <div class="flex justify-between items-center bg-gray-100 py-5 md:px-8 px-5">
+                            <div class="flex items-center ">
+                                <img src="https://tailwindui.com/img/logos/48x48/savvycal.svg" alt="lastsecImg" class="border rounded border-gray-300 h-10 w-10">
+                                <h2 class="text-sm font-semibold ml-5">SavvyCal</h2>
+                            </div>
+                            
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                  </svg>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="flex justify-between  md:px-8 px-5 border-b py-4">
+                                <h2 class="text-sm md:text-medium md:font-semibold  text-gray-500">Last invoice</h2>
+                                <h2 class="text-sm md:text-medium md:font-semibold  text-gray-800">Decembaer 13,2022</h2>
+                            </div>
+                            <div class="flex justify-between  md:px-8 px-5 py-4">
+                                <h2 class="text-sm md:font-semibold md:text-medium  text-gray-500">Amount</h2>
+                                <div class="flex items-center">
+                                    <h2  class="text-sm md:text-medium">2000</h2>
+                                    <p class="border border-green-500 px-1 ml-2 text-green-800 bg-green-200 rounded text-xs font-semibold">Paid</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <!--  -->
+                    <div class="border border-gray-200 rounded">
+                        <div class="flex justify-between items-center bg-gray-100 py-5 md:px-8 px-5">
+                            <div class="flex items-center ">
+                                <img src="https://tailwindui.com/img/logos/48x48/reform.svg" alt="lastsecImg" class="border rounded border-gray-300 h-10 w-10">
+                                <h2 class="text-sm font-semibold ml-5">Reform</h2>
+                            </div>
+                            
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                  </svg>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="flex justify-between  md:px-8 px-5 border-b py-4">
+                                <h2 class=" text-sm md:text-medium md:font-semibold  text-gray-500">Last invoice</h2>
+                                <h2 class=" text-sm md:text-medium md:font-semibold  text-gray-800">Decembaer 13,2022</h2>
+                            </div>
+                            <div class="flex justify-between  md:px-8 px-5 py-4">
+                                <h2 class="text-sm lg:text-medium md:font-semibold  text-gray-500 ">Amount</h2>
+                                <div class="flex items-center">
+                                    <h2  class="text-sm md:text-medium text-black">2000</h2>
+                                    <p class="border border-green-500 px-1 ml-2 text-green-800 bg-green-200 rounded text-xs font-semibold">Paid</p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                     
+                    </div>
+    
+    
+                </div>
+            </div>
+       </section>
+        
+    </section>
+  
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
